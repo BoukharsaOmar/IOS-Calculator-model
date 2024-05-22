@@ -1,0 +1,93 @@
+:root {
+  --black: #333333;
+  --gray: #A5A5A5;
+  --orange: #F1A33B;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 16px 16px 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 14px;
+}
+
+.result {
+  color: white;
+  align-self: flex-end;
+  font-size: 90px;
+  font-weight: 300;
+  margin-right: 32px;
+  margin-bottom: 16px;
+}
+
+.circle {
+  border: none;
+  width: 100%;
+  height: 88px;
+  border-radius: 50%;
+  font-size: 40px;
+  background-color: var(--black);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-gray {
+  background-color: var(--gray);
+  color: #000;
+}
+
+.circle-orange {
+  background-color: var(--orange);
+}
+
+.circle-wide {
+  border: none;
+  width: 100%;
+  height: 88px;
+  border-radius: 50%;
+  font-size: 40px;
+  grid-column: span 2;
+  background-color: var(--black);
+  color: #fff;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .result {
+      font-size: 60px;
+      margin-right: 16px;
+      margin-bottom: 8px;
+  }
+
+  .circle {
+      height: 60px;
+      font-size: 30px;
+  }
+
+  .circle-wide {
+      height: 60px;
+      border-radius: 30px; /* Adjusted to stay rounded on smaller screens */
+  }
+}
